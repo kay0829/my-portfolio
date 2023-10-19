@@ -1,0 +1,12 @@
+.container {
+    margin-bottom: 60px;
+}
+
+.titleContainer {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.childrenContainer {
+    display: flex;
+}

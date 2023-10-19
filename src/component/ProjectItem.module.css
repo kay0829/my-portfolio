@@ -1,0 +1,61 @@
+.container {
+    width: 300px;
+    margin-right: 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    font-size: 14px;
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 3px 3px 3px var(--border);
+}
+
+.container:hover {
+    background-color: var(--light-background);
+}
+
+.descriptionContainer {
+    height: 125px;
+    padding: 8px;
+}
+
+.explationImg {
+    width: 100%;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.iconImg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin: 8px 0;
+    font-weight: 700;
+}
+
+.date {
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.myPart {
+    background: linear-gradient(to top, #e3f2fb 50%, transparent 40%);
+}
+
+.stackContainer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 42px;
+    padding: 0 8px;
+}

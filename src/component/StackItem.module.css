@@ -1,0 +1,13 @@
+.stackItem {
+    height: 18px;
+    padding: 2px 4px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    border-radius: 4px;
+    color: var(--violet);
+    background-color: var(--border);
+}
