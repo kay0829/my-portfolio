@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Intro from "@container/intro/Intro";
 import Layout from "@component/Layout";
 import Main from "@container/main/Main";
+import Resume from "@container/resume/Resume";
+import Portfolio from "@container/portfolio/Portfolio";
 import styles from "./App.module.css";
 
 // import { useScroll } from "@hook/useScroll";
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Main />,
+            },
+            {
+                path: "/resume",
+                element: <Resume />,
+            },
+            {
+                path: "/portfolio",
+                element: <Portfolio />,
             },
         ],
     },
