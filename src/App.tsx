@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Intro from "@container/intro/Intro";
 import Layout from "@component/Layout";
+import Main from "@container/main/Main";
 import styles from "./App.module.css";
 
 // import { useScroll } from "@hook/useScroll";
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Layout />,
         children: [
+            {
+                path: "/",
+                element: <Main />,
+            },
         ],
     },
 ]);
@@ -31,6 +36,7 @@ function App() {
     return (
         <>
             {isIntro && <Intro />}
+            <div className={styles.mainContainer}>{!isIntro && <RouterProvider router={router} />}</div>
         </>
     );
 }
