@@ -1,0 +1,38 @@
+@keyframes brightBg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40% 45%;
+    }
+}
+
+@keyframes snow {
+    0% {
+        background-position:
+            0px 0px,
+            0px 0px;
+    }
+    100% {
+        background-position:
+            400px 400px,
+            300px 300px;
+    }
+}
+
+.section {
+    background: radial-gradient(ellipse, #fff 0%, #1b2735 80%, #090a1f 100%);
+    background-position: 0 0;
+    background-size: 500% 500%;
+
+    /* animation: brightBg 1s; */
+    animation-delay: 2s;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+
+    background-image: url("snow-blurred.png"), url("snow-circle.png");
+    animation: snow 20s linear infinite;
+}

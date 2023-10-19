@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "KCC-Ganpan";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes bounce {
+    0% {
+        top: 0;
+    }
+    55% {
+        top: -100px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes titleAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    }
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    80% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+        -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+        clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+    }
+}
+
+.textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    text-transform: uppercase;
+}
+
+.textContainer span {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    font-family: "KCC-Ganpan";
+    font-size: 80px;
+    color: var(--white);
+    text-shadow:
+        0 1px 0 var(--border),
+        0 2px 0 var(--border),
+        0 3px 0 var(--border),
+        0 4px 0 var(--border),
+        0 5px 0 var(--border),
+        0 6px 0 transparent,
+        0 7px 0 transparent,
+        0 8px 0 transparent,
+        0 9px 0 transparent,
+        0 10px 10px rgba(255, 255, 255, 0.4);
+}
+
+/* .textContainer .pointText {
+    color: var(--pink);
+    animation: bounce 0.5s ease-in-out;
+    text-shadow:
+        0 5px 0 rgba(203, 96, 96, 0.8),
+        0 9px 0 transparent,
+        0 10px 10px rgba(203, 96, 96, 0.4);
+} */
+
+.textContainer .pointText {
+    color: var(--pink);
+    text-shadow:
+        0 5px 0 rgba(203, 96, 96, 0.8),
+        0 9px 0 transparent,
+        0 10px 10px rgba(203, 96, 96, 0.4);
+
+    float: left;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: titleAnimation 3s ease;
+}
+.textContainer span:nth-child(2),
+.textContainer span:nth-child(3),
+.textContainer span:nth-child(5) {
+    margin-right: 32px;
+}
+
+.textContainer span:nth-child(4) {
+    animation-delay: 0.8s;
+}
