@@ -8,6 +8,8 @@ import Resume from "@container/resume/Resume";
 import Portfolio from "@container/portfolio/Portfolio";
 import IMHW from "@container/imhw/IMHW";
 import CashBroom from "@container/cashbroom/CashBroom";
+import DevSquad from "@container/devsquad/DevSquad";
+import StackOverflow from "@container/stackoverflow/StackOverflow";
 import styles from "./App.module.css";
 
 // import { useScroll } from "@hook/useScroll";
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
             {
                 path: "/portfolio/cashbroom",
                 element: <CashBroom />,
+            },
+            {
+                path: "/portfolio/devsquad",
+                element: <DevSquad />,
+            },
+            {
+                path: "/portfolio/stackoverflow",
+                element: <StackOverflow />,
             },
         ],
     },

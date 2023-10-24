@@ -1,0 +1,66 @@
+.container {
+    width: 100%;
+    padding: 80px;
+}
+
+.iconImg {
+    width: 80px;
+    height: 80px;
+}
+
+.textContainer {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 70px;
+}
+
+.stackContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.grayText {
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pointText {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.pinkText {
+    color: var(--pink);
+    font-weight: 700;
+}
+
+.linkText {
+    color: var(--gray);
+    border-bottom: 1px solid var(--border);
+}
+
+.gifContainer {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.codeContainer {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--light-background);
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.codeContainer span {
+    font-size: 14px;
+    font-weight: 400;
+}
