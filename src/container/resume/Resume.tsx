@@ -70,7 +70,7 @@ function Resume() {
             </section>
             <TextContainer title="About Me">
                 <p>
-                    <span className={styles.pointText}>“정열을 만나면 열정이 솟는다!”</span> 프론트엔드 개발자
+                    <span className={styles.pointText}>성장함을 느꼈을 때 가장 행복한 개발자</span> 프론트엔드 개발자
                     임정렬입니다.
                 </p>
                 <br />
@@ -128,16 +128,6 @@ function Resume() {
                             <StackItem stack={v} key={v} />
                         ))}
                     </ol>
-                </div>
-            </TextContainer>
-            <TextContainer title="Projects">
-                <div className={styles.projectContainer}>
-                    <p>프로젝트에 대한 자세한 소개는 </p>
-                    <Link to="/portfolio" className={styles.portfolioLink}>
-                        <LiaExternalLinkAltSolid />
-                        <p>포트폴리오</p>
-                    </Link>
-                    <p> 페이지에 담았습니다.</p>
                 </div>
             </TextContainer>
             <TextContainer title="Career">
@@ -209,17 +199,23 @@ function Resume() {
                     <ul className={styles.careerDescriptionContainer}>
                         <li>
                             <p>
-                                웹 개발의 기본인 HTML, CSS, Javascript에 대해 학습하고, 정적 타입 언어인 Typescript에
-                                대해 학습하였습니다.
+                                웹 개발의 기본인 <span className={styles.pointText}>HTML, CSS, Javascript</span>에 대해
+                                학습하고, 정적 타입 언어인 <span className={styles.pointText}>Typescript</span>에 대해
+                                학습하였습니다.
                             </p>
                         </li>
                         <li>
                             <p>
-                                React와 React hook, 상태 관리 라이브러리에 대해 학습하고 이를 프로젝트에 적용하였습니다.
+                                <span className={styles.pointText}>React와 React hook, 상태 관리 라이브러리</span>에
+                                대해 학습하고 이를 프로젝트에 적용하였습니다.
                             </p>
                         </li>
                         <li>
-                            <p>atomic 디자인에 대한 학습을 기반으로 storybook 라이브러리를 사용해보았습니다.</p>
+                            <p>
+                                <span className={styles.pointText}>atomic 디자인</span>에 대한 학습을 기반으로{" "}
+                                <span className={styles.pointText}>storybook</span>
+                                라이브러리를 사용해보았습니다.
+                            </p>
                         </li>
                         <li>
                             <p>
@@ -245,7 +241,11 @@ function Resume() {
                             <ul>
                                 <li>
                                     <p>
-                                        (주)시소의 비전공자 대상 웹 개발 교육 프로그램인 hatch program에 참여하였습니다.
+                                        (주)시소의 비전공자 대상{" "}
+                                        <span className={styles.pointText}>
+                                            웹 개발 교육 프로그램인 hatch program에 참여
+                                        </span>
+                                        하였습니다.
                                     </p>
                                 </li>
                                 <ol className={styles.stackContainer}>
@@ -285,6 +285,16 @@ function Resume() {
                             </ul>
                         </li>
                     </ul>
+                </div>
+            </TextContainer>
+            <TextContainer title="Projects">
+                <div className={styles.projectContainer}>
+                    <p>프로젝트에 대한 자세한 소개는 </p>
+                    <Link to="/portfolio" className={styles.portfolioLink}>
+                        <LiaExternalLinkAltSolid />
+                        <p>포트폴리오</p>
+                    </Link>
+                    <p> 페이지에 담았습니다.</p>
                 </div>
             </TextContainer>
             <TextContainer title="Languages">

@@ -60,8 +60,8 @@ function Main() {
 
             <section className={styles.textContainer}>
                 <p>
-                    안녕하세요. <span className={styles.pointText}>성장함을 느꼈을 때 가장 행복한 개발자</span>{" "}
-                    임정렬입니다.
+                    안녕하세요. <span className={styles.pointText}>“정열을 만나면 열정이 솟는다!”</span> 프론트엔드
+                    개발자 임정렬입니다.
                 </p>
                 <br />
                 <p>처음 개발을 접했을 때, 입력에 따라 동작하는 것을 눈으로 볼 수 있다는 매력에 반했고,</p>

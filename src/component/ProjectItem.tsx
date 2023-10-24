@@ -1,10 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 import StackItem from "./StackItem";
 import styles from "./ProjectItem.module.css";
 
 interface IProps {
-    explantaionImg?: string;
+    explanationImg?: string;
     iconImg?: string;
     date: string;
+
+    route: string;
 
     title: string;
     stack: string[];
@@ -12,13 +16,15 @@ interface IProps {
 }
 
 function ProjectItem({ project }: { project: IProps }) {
-    const { title, stack, explantaionImg, iconImg, myPart, date } = project;
+    const navigate = useNavigate();
+
+    const { title, stack, explanationImg, iconImg, myPart, date, route } = project;
     return (
-        <section className={styles.container}>
+        <section className={styles.container} onClick={() => navigate(`/portfolio/${route}`)}>
             {iconImg && (
                 <>
-                    {explantaionImg ? (
-                        <img src={explantaionImg} alt="" className={styles.explationImg} />
+                    {explanationImg ? (
+                        <img src={explanationImg} alt="" className={styles.explationImg} />
                     ) : (
                         <div style={{ height: "150px" }}></div>
                     )}
