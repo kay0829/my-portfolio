@@ -3,6 +3,7 @@ import StackItem from "@component/StackItem";
 
 import styles from "./StackOverflow.module.css";
 import IconStackOverflow from "@assets/icon_stackoverflow_mini.png";
+import GitRuleExample from "@assets/git-rule-example.png";
 
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
 
@@ -107,15 +108,91 @@ function StackOverflow() {
                 <ul>
                     <li>
                         <p>
-                            많은 변경사항이 적용된 13 버전으로 프로젝트를 세팅하였으며, 각 컴포넌트의 역할에 따라 서버
-                            컴포넌트, 클라이언트 컴포넌트로 나누어 사용하였습니다.
+                            <span className={styles.pointText}>많은 변경사항이 적용된 13 버전으로 프로젝트를 세팅</span>
+                            하였으며, 각 컴포넌트의 역할에 따라{" "}
+                            <span className={styles.pointText}>서버 컴포넌트, 클라이언트 컴포넌트로 나누어</span>{" "}
+                            사용하였습니다.
                         </p>
                     </li>
                     <li>
                         <p>
-                            SSG, SSR, ISR 의 기법을 fetch 로 어떻게 구현하는지 학습한 후 dummy json api 를 요청하며 어떤
-                            차이가 있는지 학습하였습니다.
+                            <span className={styles.pointText}>
+                                SSG, SSR, ISR 의 기법을 fetch 로 어떻게 구현하는지 학습
+                            </span>
+                            한 후 dummy json api 를 요청하며 어떤 차이가 있는지 학습하였습니다.
                         </p>
+                    </li>
+                </ul>
+            </TextContainer>
+            <TextContainer title="💡 문제 해결 경험">
+                <h3>Github rulesets</h3>
+                <p>Github rulesets는 특정 브랜치 또는 태그에 대해 규칙을 정할 수 있도록 설정할 수 있습니다.</p>
+                <br />
+                <strong>도입 계기</strong>
+                <ul>
+                    <li>
+                        <p>
+                            git flow를 경험한 팀원들은 develop 또는 main 브랜치에 직접 푸시하거나 리뷰어 승인이 떨어지지
+                            않았는데 머지하는 경우를 우려하였습니다.
+                        </p>
+                    </li>
+                </ul>
+                <strong>작업 내용</strong>
+                <ul>
+                    <li>
+                        <p>
+                            처음에는 git hook 또는 husky 도입을 고민하였으나 github rulesets를 통해 쉽게 세팅할 수
+                            있음을 알게 되었습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span className={styles.pointText}>
+                                main, develop 브랜치에는 직접 푸시 금지 설정과 develop, main 브랜치 PR에 최소 한명의
+                                승인이 있을 경우에만 merge가 가능
+                            </span>
+                            하도록 설정하였습니다.
+                        </p>
+                    </li>
+                </ul>
+                <br />
+                <h3>자동 리뷰어 지정</h3>
+                <strong>도입 계기</strong>
+                <ul>
+                    <li>
+                        <p>
+                            PR에 대한 리뷰어로 모든 팀원을 올리는 것을 규칙으로 하였으나, 6명의 닉네임을 찾아 일일이
+                            리뷰어로 지정하는 것에 불편함을 느꼈습니다.
+                        </p>
+                    </li>
+                </ul>
+                <strong>작업 내용</strong>
+                <ul>
+                    <li>
+                        <p>
+                            <span className={styles.pointText}>.github &gt; CODEOWNERS 파일</span>에 자동으로 코드
+                            리뷰어를 지정할 수 있음을 알게되었고, 다음과 같이 설정하였습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <div className={styles.codeContainer}>
+                            <span>* @kay0829 </span>
+                            <span className={styles.grayText}>// 팀원분들 닉네임 공백으로 구분</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            Dev Squad 프로젝트의 경우 다음과 같이 설정하여 폴더 별로(프론트/백엔드 별로) 리뷰어 지정을
+                            자동으로 할 수 있었습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <div className={styles.codeContainer}>
+                            <span>/server </span>
+                            <br />
+                            <span>/client @kay0829 </span>
+                            <span className={styles.grayText}>// 팀원분들 닉네임 공백으로 구분</span>
+                        </div>
                     </li>
                 </ul>
             </TextContainer>
@@ -142,6 +219,7 @@ function StackOverflow() {
                         </p>
                     </li>
                 </ul>
+                <img src={GitRuleExample} alt="" className={styles.imgContainer} />
                 <br />
                 <strong>팀장으로서의 역할</strong>
                 <ul>

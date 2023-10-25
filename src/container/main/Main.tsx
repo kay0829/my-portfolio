@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import IconGithub from "@assets/icon-github.png";
 import IconVelog from "@assets/icon-velog.png";
 // import myImg from "@assets/my-img.jpeg";
@@ -64,18 +66,39 @@ function Main() {
                     개발자 임정렬입니다.
                 </p>
                 <br />
-                <p>처음 개발을 접했을 때, 입력에 따라 동작하는 것을 눈으로 볼 수 있다는 매력에 반했고,</p>
+                {/* <p>취창업연계센터에서 게임 만들기 동아리에 참여하여 개발을 처음 접하게 되었고,</p>
+                <p>입력에 따라 의도한대로 동작하는 모습을 즉각적으로 눈으로 볼 수 있다는 매력에 반하게 되었습니다.</p>
+                <br />
+                <p>또한 구현한 클리커 게임을 다른 분들이 즐기는 모습을 보며 느꼈던 뿌듯한 감정은</p>
                 <p>
-                    처음 구현한 게임을 다른 분들이 즐기는 모습을 보며 느꼈던 뿌듯한 감정은 저에게 개발자라는 꿈을
-                    꾸게해주었습니다.
-                </p>
+                    "내가 참여하여 만든 서비스를 사용자가 즐길 수 있다면 정말 행복하겠다"라는 생각으로 이어져 개발자라는
+                    꿈을 꾸게해주었습니다.
+                </p> */}
                 <br />
                 <p>
                     <span className={styles.pointText}>1년 6개월의 실무 경험</span>과 프론트엔드 개발자로서 깊이를
                     다지고자 참여한 6개월 간의 개발 교육을 지나
                 </p>
-                <p className={styles.pointText}>
-                    앞으로 저의 목표는 서로의 성장에 시너지를 주고받을 수 있는, 함께 하고 싶은 개발자가 되는 것입니다.
+                <p>
+                    <span className={styles.pointText}>
+                        서로의 성장에 시너지를 주고받을 수 있는, 함께 하고 싶은 개발자 동료
+                    </span>
+                    를 목표로 달려가고 있습니다.
+                </p>
+                <br />
+                <p>
+                    👉🏻
+                    <Link to="/resume">
+                        <span className={styles.linkText}>Resume</span>
+                    </Link>
+                    : 개발과 관련한 이력 사항을 기술하였습니다.
+                </p>
+                <p>
+                    👉🏻
+                    <Link to="/portfolio">
+                        <span className={styles.linkText}>Portfolio</span>
+                    </Link>
+                    : 지금까지 진행한 개발 프로젝트 내용을 담았습니다.
                 </p>
             </section>
 

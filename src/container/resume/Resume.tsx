@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import TextContainer from "@component/TextContainer";
-import Timeline from "@component/Timeline";
+// import Timeline from "@component/Timeline";
 
 import styles from "./Resume.module.css";
 
@@ -24,10 +24,11 @@ const libraraySkill = [
     "React Native",
     "Fastlane",
 ];
-const serverSkill = ["MySQL", "Ruby on Rails"];
+const serverSkill = ["MySQL", "Ruby on Rails", "Node.js"];
 const imhwStack = ["react", "mobx", "react native", "fastlane", "redux", "styled-component", "ruby on rails", "mysql"];
 const cashbroomStack = ["react", "typescript", "redux", "ruby on rails", "mysql"];
 const linktalkStack = ["react native", "typescript", "redux"];
+const collaborationSkill = ["git", "github", "Postman", "Notion", "Slack"];
 
 function Resume() {
     return (
@@ -74,39 +75,45 @@ function Resume() {
                     임정렬입니다.
                 </p>
                 <br />
-                <p>
-                    취창업연계센터에서 처음 개발을 접하게 되었고, 직무 심화 교육 기간 동안 비전공자 대상 웹 개발 교육
-                    프로그램에 참여하였습니다.
-                </p>
-                <br />
-                <p className={styles.pointText}>
-                    이후 입사한 스타트업에서 하나의 서비스를 맡아 유지보수와 고객사 요청 또는 서비스 발전을 위한 추가
-                    개발을 진행하였으며,
-                </p>
-                <p className={styles.pointText}>
-                    또한 신규 서비스의 기획부터 앱 서비스의 필수 기능을 넣은 MVP 앱 런칭까지의 프로세스를
-                    경험하였습니다.
-                </p>
+                <p>취창업연계센터에서 게임 동아리를 통해 처음 개발을 접하면서 개발의 매력에 반하게 되었고,</p>
+                <p>직무 심화 교육 기간 동안 웹 개발 교육을 수강하여 기본적인 웹 개발 능력을 갖추게 되었습니다.</p>
                 <br />
                 <p>
-                    프론트엔드 개발자로서 깊이를 다지고자 부트캠프에 참여하여 동료들과 정보를 공유하고 함께 프로젝트를
-                    진행하며 개발 역량을 쌓을 수 있었습니다.
+                    이후{" "}
+                    <span className={styles.pointText}>
+                        입사한 스타트업에서 하나의 서비스를 맡아 Web, App, Server에 대한 유지보수와 추가 개발
+                    </span>
+                    을 진행하며,
                 </p>
+                <p>클라이언트 및 서버 코드를 직접 구현하여 각 분야에 대한 이해도를 높일 수 있었습니다.</p>
                 <p>
-                    동료분들과 새로운 라이브러리를 경험하고 토론하며 깊게 공부해본 경험은 값진 경험이었고, 함께 성장하는
-                    즐거움을 깨달을 수 있었습니다.
+                    또한{" "}
+                    <span className={styles.pointText}>
+                        신규 서비스의 기획부터 앱 서비스의 필수 기능을 넣은 MVP 앱 런칭까지의 프로세스를 경험
+                    </span>
+                    하였습니다.
                 </p>
                 <br />
-                <p className={styles.pointText}>
-                    열정적으로 성장을 추구하며 성장에 시너지가 날 수 있는 개발자 동료가 되고싶습니다.
+                <p>
+                    프론트엔드 개발자로서 깊이를 다지고자 참여한 부트캠프에서 동료들과 새로운 라이브러리를 경험하고
+                    프로젝트를 진행한 경험은 값진 경험이었고,
+                </p>
+                <p>동료분들과 함께 성장하는 즐거움을 깨달을 수 있었습니다.</p>
+                <br />
+                <p>
+                    앞으로{" "}
+                    <span className={styles.pointText}>
+                        서로의 성장에 시너지를 주고받을 수 있는, 함께 하고 싶은 개발자 동료
+                    </span>
+                    가 되고싶습니다.
                 </p>
             </TextContainer>
-            <TextContainer title="Timeline">
+            {/* <TextContainer title="Timeline">
                 <Timeline />
-            </TextContainer>
+            </TextContainer> */}
             <TextContainer title="Skill">
                 <div>
-                    <span className={styles.fontBold}>[프로그래밍 언어]</span>
+                    <strong>[Language]</strong>
                     <ol className={styles.skillContainer}>
                         {programmingSkill.map((v) => (
                             <StackItem stack={v} key={v} />
@@ -114,7 +121,7 @@ function Resume() {
                     </ol>
                 </div>
                 <div>
-                    <span className={styles.fontBold}>[프레임워크 & 라이브러리]</span>
+                    <strong>[Framework & Library]</strong>
                     <ol className={styles.skillContainer}>
                         {libraraySkill.map((v) => (
                             <StackItem stack={v} key={v} />
@@ -122,9 +129,17 @@ function Resume() {
                     </ol>
                 </div>
                 <div>
-                    <span className={styles.fontBold}>[DB & 서버]</span>
+                    <strong>[DB & server]</strong>
                     <ol className={styles.skillContainer}>
                         {serverSkill.map((v) => (
+                            <StackItem stack={v} key={v} />
+                        ))}
+                    </ol>
+                </div>
+                <div>
+                    <strong>[Skills for Collaboration]</strong>
+                    <ol className={styles.skillContainer}>
+                        {collaborationSkill.map((v) => (
                             <StackItem stack={v} key={v} />
                         ))}
                     </ol>
@@ -137,17 +152,37 @@ function Resume() {
                 </div>
                 <div className={styles.careerContainer}>
                     <div className={styles.careerItemContainer}>
-                        <span>근태관리 앱, </span>
-                        <span className={styles.fontBold}>아임히어워크</span>
+                        <Link className={styles.linkText} to="/portfolio/imherework">
+                            <LiaExternalLinkAltSolid />
+                            <span>근태관리 앱, </span>
+                            <strong>아임히어워크</strong>
+                        </Link>
                         <p>(2021.07 ~ 2022.09)</p>
+                        <p>- 1년 2개월</p>
+                        <p>- 개발팀: 1명 / 기획팀: 1명</p>
                     </div>
                     <ul className={styles.careerDescriptionContainer}>
+                        <li>
+                            <p>
+                                <span className={styles.pointText}>서비스를 전담하여 클라이언트와 서버를 담당</span>
+                                하였으며, 고객사 요청 또는 서비스 발전을 위한 개발 또는 유지보수의 우선순위를 정하여
+                                추가 개발을 진행하였습니다.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span className={styles.pointText}>애자일 방법론을 통한 프로젝트 관리</span>를 통해
+                                책임감을 가지고 서비스 개발에 임하였습니다.
+                            </p>
+                        </li>
+                        <br />
                         <li>
                             <p>담당: APP, Server, 관리자 페이지(Web) 유지보수 및 추가 개발</p>
                         </li>
                         <li>
                             <p>기타: CS 응대</p>
                         </li>
+                        <br />
                         <ol className={styles.stackContainer}>
                             {imhwStack.map((v) => (
                                 <StackItem stack={v} key={v} />
@@ -157,14 +192,29 @@ function Resume() {
                 </div>
                 <div className={styles.careerContainer}>
                     <div className={styles.careerItemContainer}>
-                        <span>O2O 심부름 플랫폼, </span>
-                        <span className={styles.fontBold}>캐시부름</span>
+                        <Link className={styles.linkText} to="/portfolio/cashbroom">
+                            <LiaExternalLinkAltSolid />
+                            <span>O2O 심부름 플랫폼, </span>
+                            <strong>캐시부름</strong>
+                        </Link>
                         <p>(2022.01 ~ 2022.03)</p>
+                        <p>- 3개월</p>
+                        <p>- 개발팀: 2명 / 기획팀: 1명</p>
                     </div>
                     <ul className={styles.careerDescriptionContainer}>
                         <li>
+                            <p>
+                                <span className={styles.pointText}>
+                                    신규 서비스의 MVP 앱(Android/iOS) 런칭의 프로세스
+                                </span>
+                                를 경험할 수 있었습니다.
+                            </p>
+                        </li>
+                        <br />
+                        <li>
                             <p>담당: Server 및 관리자 페이지(Web) 개발</p>
                         </li>
+                        <br />
                         <ol className={styles.stackContainer}>
                             {cashbroomStack.map((v) => (
                                 <StackItem stack={v} key={v} />
@@ -175,13 +225,16 @@ function Resume() {
                 <div className={styles.careerContainer}>
                     <div className={styles.careerItemContainer}>
                         <span>4050 친구찾기 앱, </span>
-                        <span className={styles.fontBold}>링톡</span>
+                        <strong>링톡</strong>
                         <p>(2022.06 ~ 2022.09)</p>
+                        <p>- 2개월</p>
+                        <p>- 개발팀: 4명 / 기획팀: 2명</p>
                     </div>
                     <ul className={styles.careerDescriptionContainer}>
                         <li>
                             <p>담당: APP 개발</p>
                         </li>
+                        <br />
                         <ol className={styles.stackContainer}>
                             {linktalkStack.map((v) => (
                                 <StackItem stack={v} key={v} />
@@ -199,30 +252,66 @@ function Resume() {
                     <ul className={styles.careerDescriptionContainer}>
                         <li>
                             <p>
-                                웹 개발의 기본인 <span className={styles.pointText}>HTML, CSS, Javascript</span>에 대해
-                                학습하고, 정적 타입 언어인 <span className={styles.pointText}>Typescript</span>에 대해
-                                학습하였습니다.
+                                프론트엔드 파트에서 언어는{" "}
+                                <span className={styles.pointText}>HTML, CSS, Javascript, Typescript</span>,
+                                라이브러리는{" "}
+                                <span className={styles.pointText}>React와 React hook, 상태 관리 라이브러리</span>에
+                                대해 학습하였습니다.
                             </p>
                         </li>
                         <li>
                             <p>
-                                <span className={styles.pointText}>React와 React hook, 상태 관리 라이브러리</span>에
-                                대해 학습하고 이를 프로젝트에 적용하였습니다.
+                                <span className={styles.pointText}>figma</span>의 사용법에 대한 학습을 통해 디자이너와
+                                프론트엔드가 어떻게 소통하는지 알 수 있었고,{" "}
+                                <span className={styles.pointText}>프로젝트의 시안을 직접 figma로 그려보는</span>
+                                시간을 가졌습니다.
                             </p>
                         </li>
                         <li>
                             <p>
                                 <span className={styles.pointText}>atomic 디자인</span>에 대한 학습을 기반으로{" "}
-                                <span className={styles.pointText}>storybook</span>
-                                라이브러리를 사용해보았습니다.
+                                <span className={styles.pointText}>storybook</span> 라이브러리를 사용해보았습니다.
+                            </p>
+                        </li>
+                        <br />
+                        <li>
+                            <p>
+                                백엔드는 <span className={styles.pointText}>Node.js</span>에 대해 학습하여,{" "}
+                                <span className={styles.pointText}>express 서버와 api 연동, jwt 토큰, oauth 인증</span>
+                                에 대해 학습하였습니다.
                             </p>
                         </li>
                         <li>
                             <p>
-                                페어 프로그래밍을 통해 동료와 함께 학습하고, 2번의 팀프로젝트를 진행하며 소통과 함께
-                                성장하는 것에 대한 가치를 알 수 있었습니다.
+                                두 번의 팀프로젝트를 진행하였으며, 두 번 모두 팀장을 맡아{" "}
+                                <span className={styles.pointText}>
+                                    깃모지(gitmoji) 사용을 통한 깃 컨벤션 통일, github 프로젝트 칸반보드를 통한 일정
+                                    관리, 데일리 미팅을 통한 이슈 관리
+                                </span>
+                                를 리드하였습니다.
                             </p>
                         </li>
+                        <ul>
+                            <li>
+                                <p>
+                                    pre-project:{" "}
+                                    <Link className={styles.linkText} to="/portfolio/stackoverflow">
+                                        <LiaExternalLinkAltSolid />
+                                        <span>StackOverflow 클론코딩</span>
+                                    </Link>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    main-project:{" "}
+                                    <Link className={styles.linkText} to="/portfolio/devsquad">
+                                        <LiaExternalLinkAltSolid />
+                                        <span>Dev Squad</span>
+                                    </Link>
+                                </p>
+                            </li>
+                        </ul>
+                        <br />
                         <ol className={styles.stackContainer}>
                             {[...programmingSkill, ...libraraySkill.slice(0, 10)].map((v) => (
                                 <StackItem stack={v} key={v} />
@@ -237,32 +326,6 @@ function Resume() {
                     </div>
                     <ul className={styles.careerDescriptionContainer}>
                         <li>
-                            <p>2020.09 ~ 2021.03: 직무 심화 교육 기간</p>
-                            <ul>
-                                <li>
-                                    <p>
-                                        (주)시소의 비전공자 대상{" "}
-                                        <span className={styles.pointText}>
-                                            웹 개발 교육 프로그램인 hatch program에 참여
-                                        </span>
-                                        하였습니다.
-                                    </p>
-                                </li>
-                                <ol className={styles.stackContainer}>
-                                    {[
-                                        ...programmingSkill.slice(0, 3),
-                                        "React",
-                                        "styled-component",
-                                        "SASS(SCSS)",
-                                        ...serverSkill,
-                                    ].map((v) => (
-                                        <StackItem stack={v} key={v} />
-                                    ))}
-                                </ol>
-                            </ul>
-                        </li>
-
-                        <li>
                             <p>2020.04 ~ 2020.09: 기업 및 지역 관련 프로젝트 수행</p>
                             <ul>
                                 <li>
@@ -271,31 +334,76 @@ function Resume() {
                                         수행하였습니다.
                                     </p>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <p>2020.09.23 제주공유경제 아이디어 공모전 우수상 시상</p>
                                 </li>
                                 <ul>
                                     <li>
                                         <p>제주경제통상진흥원 주관 (공유 경제 부문)</p>
+
                                         <li>
                                             <p>월세/년세 세입자를 위한 가전, 가구 렌탈 서비스</p>
                                         </li>
                                     </li>
-                                </ul>
+                                </ul> */}
+                                <li>
+                                    <p className={styles.pointText}>2020.07 ~ 09 게임 만들기 동아리 참여</p>
+                                </li>
                             </ul>
                         </li>
+                        <br />
+                        <li>
+                            <p>2020.09 ~ 2021.03: 직무 심화 교육 기간</p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        (주)시소의 <span className={styles.pointText}>웹 개발 교육 프로그램</span>인
+                                        hatch program에 참여 하였습니다.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        프론트엔드는{" "}
+                                        <span className={styles.pointText}>
+                                            HTML, CSS, Javascript, class 컴포넌트 기반의 React
+                                        </span>
+                                        를 학습하고, 백엔드는 <span className={styles.pointText}>Node.js</span>를
+                                        학습하였습니다.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        배운 내용을 토대로{" "}
+                                        <Link className={styles.linkText} to="/portfolio/ohouse">
+                                            <LiaExternalLinkAltSolid />
+                                            <span>오늘의 집을 클론코딩 </span>
+                                        </Link>
+                                        하는 개인 프로젝트를 진행하였습니다.
+                                    </p>
+                                </li>
+                                <br />
+                            </ul>
+                        </li>
+                        <ol className={styles.stackContainer}>
+                            {[
+                                ...programmingSkill.slice(0, 3),
+                                ...["React", "styled-component", "SASS(SCSS)", "styled-component", "node.js", "mysql"],
+                            ].map((v) => (
+                                <StackItem stack={v} key={v} />
+                            ))}
+                        </ol>
                     </ul>
                 </div>
             </TextContainer>
             <TextContainer title="Projects">
-                <div className={styles.projectContainer}>
-                    <p>프로젝트에 대한 자세한 소개는 </p>
-                    <Link to="/portfolio" className={styles.portfolioLink}>
+                <p>
+                    프로젝트에 대한 자세한 소개는{" "}
+                    <Link to="/portfolio" className={styles.linkText}>
                         <LiaExternalLinkAltSolid />
-                        <p>포트폴리오</p>
-                    </Link>
-                    <p> 페이지에 담았습니다.</p>
-                </div>
+                        <span>포트폴리오</span>
+                    </Link>{" "}
+                    페이지에 담았습니다.
+                </p>
             </TextContainer>
             <TextContainer title="Languages">
                 <div className={styles.careerContainer}>

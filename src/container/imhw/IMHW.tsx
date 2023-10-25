@@ -23,7 +23,7 @@ function IMHW() {
                 </ol>
             </div>
 
-            <TextContainer title="🏷️ 아임히어워크 서비스를 담당하면서">
+            <TextContainer title="🏷️ 아임히어워크를 담당하면서">
                 <p>입사 후 약 1년간 아임히어워크를 전담하여 서비스 운영에 적극적으로 참여하였습니다.</p>
                 <br />
                 <p>
@@ -39,7 +39,7 @@ function IMHW() {
                     으로 진행하였습니다.
                 </p>
                 <br />
-                <p>zendesk를 통해 사용자의 의견을 직접 듣고 안내드릴 수 있었으며,</p>
+                <p>CS 응대는 zendesk를 통해 사용자의 의견을 직접 듣고 안내드릴 수 있었으며,</p>
                 <p>
                     <span className={styles.pointText}>
                         사용자의 서비스에 대한 의견 또는 고객사의 요청의 우선순위를 정리
@@ -324,7 +324,7 @@ function IMHW() {
                     </li>
                 </ul>
                 <br />
-                <strong>애자일 조직에 대한 경험</strong>
+                <strong>애자일 방법론을 통한 프로젝트 관리에 대한 경험</strong>
                 <ul>
                     <li>
                         <p>

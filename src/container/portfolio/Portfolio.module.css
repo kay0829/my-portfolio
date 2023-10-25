@@ -36,3 +36,9 @@
     color: var(--blue);
     font-weight: 700;
 }
+
+@media (max-width: 550px) {
+    .defaultInfoContainer {
+        flex-direction: column;
+    }
+}

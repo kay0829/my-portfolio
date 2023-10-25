@@ -26,6 +26,20 @@
     padding: 0;
 }
 
+.codeContainer {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--light-background);
+    border-radius: 4px;
+    margin: 20px 0;
+    overflow-x: scroll;
+}
+
+.codeContainer span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .grayText {
     color: var(--gray);
     font-size: 14px;
@@ -40,4 +54,17 @@
 .linkText {
     color: var(--gray);
     border-bottom: 1px solid var(--border);
+}
+
+.imgContainer {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding: 10px;
+    }
 }

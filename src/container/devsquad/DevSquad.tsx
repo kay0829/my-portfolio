@@ -4,6 +4,7 @@ import StackItem from "@component/StackItem";
 import styles from "./DevSquad.module.css";
 import IconDevSquad from "@assets/icon_devsquad.png";
 import LoadingSekeleton from "@assets/loading-sekeleton.gif";
+import FigmaExample from "@assets/figma-example.png";
 
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
 
@@ -35,7 +36,7 @@ function DevSquad() {
                 </ol>
             </div>
             <TextContainer title={DevSquadTitle}>
-                <div className={styles.textContainer} style={{ display: "flex", alignItems: "center" }}>
+                <div className={styles.infoContainer}>
                     <ul className={styles.flex1}>
                         <li>
                             <p>
@@ -84,14 +85,12 @@ function DevSquad() {
                         <ul>
                             <li>
                                 <p>
-                                    <strong>아이디:</strong> test01@test.com
+                                    <strong>ID:</strong> test01@test.com
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <p>
-                                        <strong>비밀번호:</strong> abc123!!
-                                    </p>
+                                    <strong>PW:</strong> abc123!!
                                 </p>
                             </li>
                         </ul>
@@ -213,6 +212,13 @@ function DevSquad() {
                         <p>
                             vite를 사용하여 세팅하였기에 tailwindcss 문서에서 설명한대로 vite에 맞는 세팅을
                             진행하였습니다.{" "}
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span className={styles.pointText}>eslint-plugin-tailwindcss</span>를 통해 중복되는 설정을
+                            하지 않도록 빨간 밑줄이 뜨거나 정해진 순서대로 classname이 정렬되며 다른 분의 코드를 편하게
+                            읽을 수 있었습니다.
                         </p>
                     </li>
                     <li>
@@ -433,6 +439,23 @@ function DevSquad() {
                         </p>
                     </li>
                 </ul>
+                <strong>figma 시안 제작</strong>
+                <ul>
+                    <li>
+                        <p>
+                            기획을 통해 도출한 내용을 figma를 통해 시안을 직접 제작함으로써{" "}
+                            <span className={styles.pointText}>기획을 구체화</span>하는 과정을 가졌고, 각 화면 옆{" "}
+                            <span className={styles.pointText}>
+                                화면정의서와 같이 설명을 추가하여 필요 기능에 대한 백엔드 분들과의 소통을 원할하고
+                                빠르게
+                            </span>{" "}
+                            진행할 수 있었습니다.
+                        </p>
+                    </li>
+                </ul>
+                <img src={FigmaExample} alt="" className={styles.imgContainer} />
+                <br />
+                <br />
                 <strong>배포 경험</strong>
                 <ul>
                     <li>

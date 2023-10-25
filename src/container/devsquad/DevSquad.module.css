@@ -16,6 +16,16 @@
     margin-bottom: 70px;
 }
 
+.infoContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 70px;
+}
+
 .stackContainer {
     display: flex;
     flex-wrap: wrap;
@@ -58,9 +68,30 @@
     background-color: var(--light-background);
     border-radius: 4px;
     margin: 20px 0;
+    overflow-x: scroll;
 }
 
 .codeContainer span {
     font-size: 14px;
     font-weight: 400;
+}
+
+.imgContainer {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding: 10px;
+    }
+
+    .gifContainer {
+        width: 100%;
+    }
+
+    .infoContainer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }

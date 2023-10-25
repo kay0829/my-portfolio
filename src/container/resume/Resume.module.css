@@ -38,9 +38,14 @@
     font-weight: 700;
 }
 
-.fontBold {
+.linkText {
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+}
+
+.linkText:hover {
+    color: var(--blue-900);
     font-weight: 700;
-    margin-right: 8px;
 }
 
 .skillContainer {
@@ -87,18 +92,6 @@
 
 .projectContainer {
     display: flex;
-}
-
-.portfolioLink {
-    display: flex;
-    align-items: center;
-    margin: 0 8px;
-    color: var(--blue);
-    font-weight: 700;
-}
-
-.portfolioLink:hover {
-    color: var(--blue-900);
 }
 
 @media (max-width: 550px) {

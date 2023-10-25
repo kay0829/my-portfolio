@@ -23,14 +23,14 @@ const NavItem = ({
     );
 };
 
+const navItem = [
+    { label: "Home", route: "/", isSelected: true },
+    { label: "Resume", route: "/resume", isSelected: false },
+    { label: "Portfolio", route: "/portfolio", isSelected: false },
+];
+
 function Gnb() {
     const { pathname } = useLocation();
-
-    const navItem = [
-        { label: "Home", route: "/", isSelected: true },
-        { label: "Resume", route: "/resume", isSelected: false },
-        { label: "Portfolio", route: "/portfolio", isSelected: false },
-    ];
 
     const navigate = useNavigate();
 
@@ -41,7 +41,7 @@ function Gnb() {
     };
 
     useEffect(() => {
-        const temp = [...items].map((v) =>
+        const temp = [...navItem].map((v) =>
             v.route === pathname ? { ...v, isSelected: true } : { ...v, isSelected: false },
         );
         setItems(temp);

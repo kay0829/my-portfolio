@@ -59,27 +59,27 @@ const codestatesProjects = [
     },
 ];
 
-export const privateProject = [
+const privateProject = [
     {
         date: "2023.07 (개인/5일)",
         title: "Co'z Shopping",
-        stack: ["react + vite", "typescript", "recoil", "storybook", "tailwindcss"],
+        stack: ["react + vite", "typescript", "recoil", "storybook", "tailwindcss", "husky"],
         myPart: "[프론트] 메인페이지, 북마크 리스트 페이지",
         route: "cozshopping",
     },
-    {
-        date: "2023.03 (개인/10일)",
-        title: "윈도우 XP 웹으로 구현해보기",
-        stack: ["typescript", "HTML", "CSS"],
-        myPart: "vanilla로 useEffect, useState 구현해보고 동작원리 학습",
-        route: "windowxp",
-    },
+    // {
+    //     date: "2023.06 (개인/10일)",
+    //     title: "구글 캘린더 앱 클론코딩",
+    //     stack: ["CRA → vite", "typescript", "tailwindcss"],
+    //     myPart: "CRA to vite 마이그레이션 및 구글 캘린더 페이지 클코딩",
+    //     route: "calendar",
+    // },
     {
         date: "2023.02 (개인/10일)",
         title: "HTML 파싱하기",
         subTitle: "typescript를 사용하여 HTML을 파싱하는 과정을 구현해본 프로젝트",
         stack: ["typescript"],
-        myPart: "공통 컴포넌트, 회원가입, 로그인, 프로필 추가 화면, 유저리스트, 마이페이지",
+        myPart: "html 파싱",
         route: "html-parsing",
     },
     {

@@ -26,7 +26,7 @@ function Timeline() {
                         className={styles.eachItem}
                         style={{
                             backgroundColor: "var(--blue-900)",
-                            width: "calc(100% / 8 * 4)",
+                            width: "calc(100% / 8 * 7)",
                             color: "var(--white)",
                         }}
                     >
@@ -34,14 +34,6 @@ function Timeline() {
                         <br />
                         (중앙아시아학과)
                     </div>
-                    <div className={styles.eachItem} style={{ width: "calc(100% / 8 * 2.5)" }}></div>
-                    <div
-                        className={styles.eachItem}
-                        style={{
-                            backgroundColor: "var(--blue-900)",
-                            width: "calc(100% / 8 * 0.6)",
-                        }}
-                    ></div>
                 </div>
                 <div className={styles.rowContainer}>
                     <div className={styles.eachItem} style={{ width: "calc(100% / 8 * 5.2)" }}></div>

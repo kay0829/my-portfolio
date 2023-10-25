@@ -43,3 +43,9 @@
     color: var(--gray);
     border-bottom: 1px solid var(--border);
 }
+
+@media (max-width: 550px) {
+    .container {
+        padding: 10px;
+    }
+}
