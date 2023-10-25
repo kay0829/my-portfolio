@@ -10,6 +10,10 @@ import IMHW from "@container/imhw/IMHW";
 import CashBroom from "@container/cashbroom/CashBroom";
 import DevSquad from "@container/devsquad/DevSquad";
 import StackOverflow from "@container/stackoverflow/StackOverflow";
+import CozShopping from "@container/coz/CozShopping";
+// import Calendar from "@container/calendar/Calendar";
+import HtmlParsing from "@container/htmlParsing/HtmlParsing";
+import Ohouse from "@container/ohouse/Ohouse";
 import styles from "./App.module.css";
 
 // import { useScroll } from "@hook/useScroll";
@@ -46,6 +50,22 @@ const router = createBrowserRouter([
             {
                 path: "/portfolio/stackoverflow",
                 element: <StackOverflow />,
+            },
+            {
+                path: "/portfolio/cozshopping",
+                element: <CozShopping />,
+            },
+            // {
+            //     path: "/portfolio/calendar",
+            //     element: <Calendar />,
+            // },
+            {
+                path: "/portfolio/html-parsing",
+                element: <HtmlParsing />,
+            },
+            {
+                path: "/portfolio/ohouse",
+                element: <Ohouse />,
             },
         ],
     },
