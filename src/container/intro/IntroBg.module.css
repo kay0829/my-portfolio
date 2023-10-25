@@ -33,6 +33,6 @@
     width: 100vw;
     min-height: 100vh;
 
-    background-image: url("snow-blurred.png"), url("snow-circle.png");
+    background-image: url("/public/snow-blurred.png"), url("/public/snow-circle.png");
     animation: snow 20s linear infinite;
 }
