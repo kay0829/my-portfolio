@@ -19,7 +19,7 @@ const companyProjects = [
         iconImg: IconImHereWork,
         title: "근태관리 앱, 아임히어워크",
         date: "2021.07 ~ 2022.09",
-        stack: ["react", "mobx", "react native", "fastlane", "redux", "styled-component", "ruby on rails", "mysql"],
+        stack: ["react", "mobx", "react native", "styled-component", "fastlane", "redux", "ruby on rails", "mysql"],
         myPart: "APP, Server, 관리자 페이지(Web) 유지보수 및 추가 개발",
         route: "imherework",
     },

@@ -1,12 +1,16 @@
 .title {
     width: fit-content;
     color: var(--orange);
-    border-bottom: 2px solid var(--orange);
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .childrenContainer {
     width: 100%;
-    padding: 20px 0;
     margin-bottom: 80px;
+}
+
+@media (max-width: 550px) {
+    .childrenContainer {
+        margin-bottom: 50px;
+    }
 }

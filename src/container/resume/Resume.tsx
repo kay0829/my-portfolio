@@ -75,19 +75,17 @@ function Resume() {
                     임정렬입니다.
                 </p>
                 <br />
-                <p>취창업연계센터에서 게임 동아리를 통해 처음 개발을 접하면서 개발의 매력에 반하게 되었고,</p>
+                <p>취창업연계센터에서 게임 동아리를 통해 처음 개발을 접하면서 개발의 매력에 반해,</p>
                 <p>직무 심화 교육 기간 동안 웹 개발 교육을 수강하여 기본적인 웹 개발 능력을 갖추게 되었습니다.</p>
                 <br />
                 <p>
                     이후{" "}
                     <span className={styles.pointText}>
-                        입사한 스타트업에서 하나의 서비스를 맡아 Web, App, Server에 대한 유지보수와 추가 개발
+                        입사한 스타트업에서 하나의 서비스를 전담하여 유지보수와 추가 개발
                     </span>
-                    을 진행하며,
+                    을 진행하였으며,
                 </p>
-                <p>클라이언트 및 서버 코드를 직접 구현하여 각 분야에 대한 이해도를 높일 수 있었습니다.</p>
                 <p>
-                    또한{" "}
                     <span className={styles.pointText}>
                         신규 서비스의 기획부터 앱 서비스의 필수 기능을 넣은 MVP 앱 런칭까지의 프로세스를 경험
                     </span>
@@ -95,8 +93,8 @@ function Resume() {
                 </p>
                 <br />
                 <p>
-                    프론트엔드 개발자로서 깊이를 다지고자 참여한 부트캠프에서 동료들과 새로운 라이브러리를 경험하고
-                    프로젝트를 진행한 경험은 값진 경험이었고,
+                    프론트엔드 개발자로서 깊이를 다지고자 참여한 부트캠프에서 동료들과 새로운 기술을 경험하고 프로젝트에
+                    적용한 경험을 통해,
                 </p>
                 <p>동료분들과 함께 성장하는 즐거움을 깨달을 수 있었습니다.</p>
                 <br />
@@ -113,34 +111,34 @@ function Resume() {
             </TextContainer> */}
             <TextContainer title="Skill">
                 <div>
-                    <strong>[Language]</strong>
+                    <h3>Language</h3>
                     <ol className={styles.skillContainer}>
                         {programmingSkill.map((v) => (
-                            <StackItem stack={v} key={v} />
+                            <StackItem stack={v} key={`skill-${v}`} />
                         ))}
                     </ol>
                 </div>
                 <div>
-                    <strong>[Framework & Library]</strong>
+                    <h3>Framework & Library</h3>
                     <ol className={styles.skillContainer}>
                         {libraraySkill.map((v) => (
-                            <StackItem stack={v} key={v} />
+                            <StackItem stack={v} key={`skill-${v}`} />
                         ))}
                     </ol>
                 </div>
                 <div>
-                    <strong>[DB & server]</strong>
+                    <h3>DB & server</h3>
                     <ol className={styles.skillContainer}>
                         {serverSkill.map((v) => (
-                            <StackItem stack={v} key={v} />
+                            <StackItem stack={v} key={`skill-${v}`} />
                         ))}
                     </ol>
                 </div>
                 <div>
-                    <strong>[Skills for Collaboration]</strong>
+                    <h3>Skills for Collaboration</h3>
                     <ol className={styles.skillContainer}>
                         {collaborationSkill.map((v) => (
-                            <StackItem stack={v} key={v} />
+                            <StackItem stack={v} key={`skill-${v}`} />
                         ))}
                     </ol>
                 </div>
@@ -163,29 +161,31 @@ function Resume() {
                     </div>
                     <ul className={styles.careerDescriptionContainer}>
                         <li>
-                            <p>
-                                <span className={styles.pointText}>서비스를 전담하여 클라이언트와 서버를 담당</span>
-                                하였으며, 고객사 요청 또는 서비스 발전을 위한 개발 또는 유지보수의 우선순위를 정하여
-                                추가 개발을 진행하였습니다.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span className={styles.pointText}>애자일 방법론을 통한 프로젝트 관리</span>를 통해
-                                책임감을 가지고 서비스 개발에 임하였습니다.
-                            </p>
-                        </li>
-                        <br />
-                        <li>
                             <p>담당: APP, Server, 관리자 페이지(Web) 유지보수 및 추가 개발</p>
                         </li>
                         <li>
                             <p>기타: CS 응대</p>
                         </li>
                         <br />
+                        <li>
+                            <p>
+                                <span className={styles.pointText}>
+                                    서비스를 전담하여 모바일 앱과 관리자페이지, 서버를 담당
+                                </span>
+                                하였으며, 고객사 요청 또는 서비스 발전을 위한 개발 우선순위를 정하여 추가 개발을
+                                진행하였습니다.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span className={styles.pointText}>애자일 방법론의 프로젝트 관리</span>를 통해 책임감을
+                                가지고 서비스 개발에 임하였습니다.
+                            </p>
+                        </li>
+                        <br />
                         <ol className={styles.stackContainer}>
                             {imhwStack.map((v) => (
-                                <StackItem stack={v} key={v} />
+                                <StackItem stack={v} key={`imhw-${v}`} />
                             ))}
                         </ol>
                     </ul>
@@ -203,6 +203,9 @@ function Resume() {
                     </div>
                     <ul className={styles.careerDescriptionContainer}>
                         <li>
+                            <p>담당: Server 및 관리자 페이지(Web) 개발</p>
+                        </li>
+                        <li>
                             <p>
                                 <span className={styles.pointText}>
                                     신규 서비스의 MVP 앱(Android/iOS) 런칭의 프로세스
@@ -211,13 +214,9 @@ function Resume() {
                             </p>
                         </li>
                         <br />
-                        <li>
-                            <p>담당: Server 및 관리자 페이지(Web) 개발</p>
-                        </li>
-                        <br />
                         <ol className={styles.stackContainer}>
                             {cashbroomStack.map((v) => (
-                                <StackItem stack={v} key={v} />
+                                <StackItem stack={v} key={`smt-${v}`} />
                             ))}
                         </ol>
                     </ul>
@@ -237,7 +236,7 @@ function Resume() {
                         <br />
                         <ol className={styles.stackContainer}>
                             {linktalkStack.map((v) => (
-                                <StackItem stack={v} key={v} />
+                                <StackItem stack={v} key={`lnk-${v}`} />
                             ))}
                         </ol>
                     </ul>
@@ -314,7 +313,7 @@ function Resume() {
                         <br />
                         <ol className={styles.stackContainer}>
                             {[...programmingSkill, ...libraraySkill.slice(0, 10)].map((v) => (
-                                <StackItem stack={v} key={v} />
+                                <StackItem stack={v} key={`code-${v}`} />
                             ))}
                         </ol>
                     </ul>
@@ -387,9 +386,9 @@ function Resume() {
                         <ol className={styles.stackContainer}>
                             {[
                                 ...programmingSkill.slice(0, 3),
-                                ...["React", "styled-component", "SASS(SCSS)", "styled-component", "node.js", "mysql"],
+                                ...["React", "styled-component", "SASS(SCSS)", "node.js", "mysql"],
                             ].map((v) => (
-                                <StackItem stack={v} key={v} />
+                                <StackItem stack={v} key={`ohouse-${v}`} />
                             ))}
                         </ol>
                     </ul>
@@ -405,16 +404,20 @@ function Resume() {
                     페이지에 담았습니다.
                 </p>
             </TextContainer>
+            <TextContainer title="Education">
+                <p>한국외국어대학교 (2016.03 ~ 2023.02)</p>
+                <ul>
+                    <li>
+                        <p>본전공: 중앙아시아학과</p>
+                    </li>
+                    <li>
+                        <p>부전공: Global Business & Technology</p>
+                    </li>
+                </ul>
+            </TextContainer>
             <TextContainer title="Languages">
-                <div className={styles.careerContainer}>
-                    <div className={styles.careerItemContainer}>
-                        <span className={styles.fontBold}>영어 🇺🇸</span>
-                    </div>
-                    <ul className={styles.careerDescriptionContainer}>
-                        <li>
-                            <p>OPIC IH (2022.12.13)</p>
-                        </li>
-                    </ul>
+                <div>
+                    <p>영어 OPIc IH (2022.12.13)</p>
                 </div>
             </TextContainer>
         </main>

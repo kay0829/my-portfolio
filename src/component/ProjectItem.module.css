@@ -57,6 +57,6 @@
 .stackContainer {
     display: flex;
     flex-wrap: wrap;
-    height: 42px;
+    min-height: 42px;
     padding: 0 8px;
 }

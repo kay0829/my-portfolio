@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+
 import styles from "./Gnb.module.css";
+import IconLogo from "@assets/icon-logo.png";
 
 const NavItem = ({
     label,
@@ -24,9 +26,8 @@ const NavItem = ({
 };
 
 const navItem = [
-    { label: "Home", route: "/", isSelected: true },
-    { label: "Resume", route: "/resume", isSelected: false },
-    { label: "Portfolio", route: "/portfolio", isSelected: false },
+    { label: "이력서", route: "/resume", isSelected: false },
+    { label: "포트폴리오", route: "/portfolio", isSelected: false },
 ];
 
 function Gnb() {
@@ -42,7 +43,7 @@ function Gnb() {
 
     useEffect(() => {
         const temp = [...navItem].map((v) =>
-            v.route === pathname ? { ...v, isSelected: true } : { ...v, isSelected: false },
+            pathname.includes(v.route) ? { ...v, isSelected: true } : { ...v, isSelected: false },
         );
         setItems(temp);
     }, [pathname]);
@@ -50,6 +51,9 @@ function Gnb() {
     return (
         <nav className={styles.container}>
             <ol className={styles.navItemContainer}>
+                <li className={styles.homeItem} onClick={() => navigate("/")}>
+                    <img src={IconLogo} alt="" />
+                </li>
                 {items.map((v) => (
                     <NavItem
                         label={v.label}
