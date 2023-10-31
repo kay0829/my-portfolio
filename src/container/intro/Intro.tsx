@@ -8,12 +8,10 @@ function Intro() {
                 <div className={textStyle.textContainer}>
                     <span className={textStyle.pointText}>정열</span>
                     <span>을</span>
-
                     <span>만나면</span>
 
                     <span className={textStyle.pointText}>열정</span>
                     <span>이</span>
-
                     <span>솟는다!</span>
                 </div>
             </div>

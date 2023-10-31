@@ -86,7 +86,7 @@ function App() {
     return (
         <>
             {isIntro && <Intro />}
-            <div className={styles.background}></div>
+            {!isIntro && <div className={styles.background}></div>}
             <div className={styles.mainContainer}>{!isIntro && <RouterProvider router={router} />}</div>
         </>
     );
