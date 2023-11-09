@@ -246,7 +246,7 @@ function Resume() {
                 <div className={styles.careerContainer}>
                     <div className={styles.careerItemContainer}>
                         <span className={styles.fontBold}>코드스테이츠 Frontend 개발자 부트캠프</span>
-                        <p>(2023.04 ~ 2022.10)</p>
+                        <p>(2023.04 ~ 2023.10)</p>
                     </div>
                     <ul className={styles.careerDescriptionContainer}>
                         <li>
